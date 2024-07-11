@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5NINE8NINE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+    /* FOR BACKGROUND */
+    body,
+    html {
+        height: 100%;
+
+
+    }
+
+    .back-img {
+        background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-position: center;
+        /*   background-repeat: no-repeat; */
+        background-size: cover;
+    }
+
+    div.avatar {
+        background-image: url("https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+        object-fit: cover;
+
+    }
+
+
+    p.super-small {
+        font-size: 10px;
+    }
+</style>
+
+<body class="back-img bg-black">
+    <div class="flex justify-center items-center mt-10">
+        <div
+            class="w-5/6 rounded-2xl overflow-hidden shadow-lg text-white bg-black  bg-opacity-80 backdrop-filter backdrop-blur-lg ">
+            <div class="py-6 mb-16">
+                <!--     NAV BAR     -->
+                <nav class="">
+                    <div class="px-8 px-14">
+                        <div class="flex justify-between items-center">
+
+                            <div class="flex justify-between items-center text-lg">
+                                <a href="#">
+                                    <svg class="h-8 w-8 " viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                        <polyline points="7.5 4.21 12 6.81 16.5 4.21" />
+                                        <polyline points="7.5 19.79 7.5 14.6 3 12" />
+                                        <polyline points="21 12 16.5 14.6 16.5 19.79" />
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                        <line x1="12" y1="22.08" x2="12" y2="12" />
+                                    </svg>
+
+                                </a>
+                            </div>
+
+                            <div class="md:flex space-x-8 items-center">
+                                <a href="https://protraffic.pythonanywhere.com/">Log in</a>
+                                <a href="https://protraffic.pythonanywhere.com/"><button
+                                        class="bg-transparent font-m bg-white text-gray-800  py-1 px-3  rounded-lg">Sign
+                                        Up
+
+                                    </button></a>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- HERO  -->
+            <div class="flex justify-center mx-auto items-center px-2">
+                <div>
+                    <div class="pb-12 px-8">
+                        <h2 class="text-5xl font-semibold">5NINE8NINE</h2>
+                        <p class="text-left py-12">
+                            Be Patient. 
+                            <br>
+                            Fetching tasks ....
+                        </p>
+                        
+                        <div>
+                            <div class="flex items-center space-x-12 px-12 mx-auto pt-14 pb-8">
+                                <a href="#">
+                                    <svg class="h-6 w-6 text-white transform  transition duration-300 hover:text-yellow-400 hover:scale-125"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect x="2" y="9" width="4" height="12" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="h-6 w-6 text-white transform  transition duration-300 hover:text-yellow-400 hover:scale-125"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="h-8 w-6 text-white transform  transition duration-300 hover:text-yellow-400 hover:scale-125"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://thembatman0.github.io/hosted-assets/untitled.png" width="500" height="500">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

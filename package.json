@@ -1,0 +1,68 @@
+{
+  "name": "5Nine8Nine",
+  "productName": "5Nine8Nine",
+  "version": "1.0.0",
+  "description": "Super Traffic Generator",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "build": "electron-builder",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "autoprefixer": "^10.4.19",
+    "electron": "^30.0.5",
+    "electron-builder": "^24.13.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  },
+  "keywords": [],
+  "author": {
+    "name": "atul",
+    "email": "atulg0736@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "build": "^0.1.4",
+    "csv-parse": "^5.5.6",
+    "electron-json-storage": "^4.6.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-store": "^9.0.0",
+    "geoip-lite": "^1.4.10",
+    "http-proxy-agent": "^7.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.7",
+    "mysql2-promise": "^0.1.4",
+    "node-fetch": "^3.3.2",
+    "proxy-chain": "^2.4.0",
+    "puppeteer": "^22.10.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "run": "^1.5.0",
+    "satelize": "^0.2.0"
+  },
+  "build": {
+    "appId": "com.5Nine8Nine.app",
+    "files": [
+      "src/**/*",
+      "frontend/**/*",
+      "WebRTC-Leak-Prevent/**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    }
+  }
+}

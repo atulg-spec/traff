@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description"
+        content="Dash UI - TailwindCSS HTML Admin Template Free and open-source Github, provides developers with everything need to create Web Application & Kick start project" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+
+    <!-- Libs CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="assets/libs/simplebar/dist/simplebar.min.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <link rel="stylesheet" href="assets/libs/apexcharts/dist/apexcharts.css" />
+
+    <title>5NINE8NINE</title>
+</head>
+
+<body>
+    <main>
+        <!-- start the project -->
+        <!-- app layout -->
+        <div id="app-layout" class="overflow-x-hidden flex">
+            <!-- start navbar -->
+            <nav class="navbar-vertical navbar">
+                <div id="myScrollableElement" class="h-screen" data-simplebar>
+                    <!-- brand logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <h4 class="text-white font-mono">5NINE8NINE</h4>
+                        <!-- <img src="assets/images/brand/logo/logo.svg" alt="" /> -->
+                    </a>
+
+                    <!-- navbar nav -->
+                    <ul class="navbar-nav flex-col" id="sideNavbar">
+                        <li class="nav-item">
+                            <a class="nav-link  active " href="index.html">
+                                <i data-feather="home" class="w-4 h-4 mr-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <div class="navbar-heading">Activities</div>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">
+                                <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+                                History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="cookie.html">
+                                <i data-feather="check-circle" class="w-4 h-4 mr-2"></i>
+                                Cookies
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="login.html">
+                                <i data-feather="user-check" class="w-4 h-4 mr-2"></i>
+                                Admin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--end of navbar-->
+
+            <!-- app layout content -->
+            <div id="app-layout-content"
+                class="min-h-screen w-full min-w-[100vw] md:min-w-0 ml-[15.625rem] [transition:margin_0.25s_ease-out]">
+                <!-- start navbar -->
+                <div class="header">
+                    <!-- navbar -->
+                    <nav class="bg-white px-6 py-[10px] flex items-center justify-between shadow-sm">
+                        <a id="nav-toggle" href="#" class="text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </a>
+                        <!-- navbar nav -->
+
+                    </nav>
+                </div>
+                <!-- end of navbar -->
+
+
+                <div class="bg-indigo-600 px-8 pt-10 lg:pt-14 pb-16 flex justify-between items-center mb-3">
+                    <!-- title -->
+                    <h1 class="text-xl text-white">Campaign</h1>
+                    <a href="#"
+                        class="btn bg-white text-gray-800 border-gray-600 hover:bg-gray-100 hover:text-gray-800 hover:border-gray-200 active:bg-gray-100 active:text-gray-800 active:border-gray-200 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"
+                        id="canvasbutton">
+                        Create New Campaign
+                    </a>
+                </div>
+                <div>
+                    <!-- card -->
+                    <div class="card shadow">
+                        <!-- tab content -->
+                        <div class="tab-content p-6" id="pills-tabFourthContent">
+                            <div class="tab-pane fade show active" id="pills-design-offcanvasTop" role="tabpanel"
+                                aria-labelledby="pills-design-offcanvasTop-tab" tabindex="0">
+                                <div class="offcanvas -translate-y-full fixed top-0 border-t right-0 left-0 border-gray-300 transition-all duration-300 w-full invisible bg-white z-50 max-h-xs"
+                                    tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                                    <div class="flex items-center p-4 bg-indigo-600">
+                                        <h5 class="text-lg text-white" id="offcanvasTopLabel">Start a Campaign</h5>
+                                        <button type="button" class="btn-close"></button>
+
+                                        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center">
+                                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                            </svg>
+                                            <span class="sr-only">Close menu</span>
+                                        </button>
+                                    </div>
+                                    <div class="p-4">
+                                        <div>
+                                            <form id="main-form" class="w-52 mt-2 bg-white shadow-md rounded px-6 mb-4"
+                                                enctype="multipart/form-data">
+                                                <!-- <h2 class="mb-4 text-xl font-semibold">Start a Campaign</h2> -->
+                                                <div class="grid grid-cols-1 gap-2">
+                                                    <div class="grid grid-cols-2 gap-2 mb-2">
+                                                        <div class="flex flex-col">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="campaignName">Campaign Name:</label>
+                                                            <input
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="campaignName" type="text"
+                                                                placeholder="Your Campaign name" required>
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="repetitionCount">Repetition count:</label>
+                                                            <input
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="repetitionCount" type="number"
+                                                                placeholder="Repetition Count" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 gap-2 mb-2">
+                                                        <div class="flex flex-col mb-2">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="urls">URLs (comma-separated):</label>
+                                                            <textarea
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="urls" placeholder="URLs" required></textarea>
+                                                        </div>
+                                                        <div class="flex flex-col mb-2">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="keywords">Keywords (comma-separated):</label>
+                                                            <textarea
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="keywords" placeholder="Keywords"
+                                                                required></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 gap-2 mb-2">
+                                                        <div class="flex flex-col">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="count">Number of Windows:</label>
+                                                            <input
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="count" type="number" placeholder="Number of Windows"
+                                                                required>
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="domain">Domain:</label>
+                                                            <input
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="domain" type="text" placeholder="example.com"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 gap-2 mb-2">
+                                                        <div class="flex flex-col">
+                                                            <div class="grid grid-cols-2 gap-2 mb-2">
+                                                                <div class="flex flex-col">
+                                                                    <label
+                                                                        class="block text-gray-700 text-sm font-bold mb-1"
+                                                                        for="visitCountFrom">From visit count:</label>
+                                                                    <input
+                                                                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                        id="visitCountFrom" type="number"
+                                                                        placeholder="Number of pages from" required>
+                                                                </div>
+                                                                <div class="flex flex-col">
+                                                                    <label
+                                                                        class="block text-gray-700 text-sm font-bold mb-1"
+                                                                        for="visitCountTo">To visit count:</label>
+                                                                    <input
+                                                                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                        id="visitCountTo" type="number" placeholder="to"
+                                                                        required>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <div class="grid grid-cols-2 gap-2 mb-2">
+                                                                <div class="flex flex-col">
+                                                                    <label
+                                                                        class="block text-gray-700 text-sm font-bold mb-1"
+                                                                        for="fromTime">Scroll Time From
+                                                                        (seconds):</label>
+                                                                    <input
+                                                                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                        id="fromTime" type="number"
+                                                                        placeholder="Scroll Time From" value="1"
+                                                                        required>
+                                                                </div>
+                                                                <div class="flex flex-col">
+                                                                    <label
+                                                                        class="block text-gray-700 text-sm font-bold mb-1"
+                                                                        for="toTime">Scroll Time To (seconds):</label>
+                                                                    <input
+                                                                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                        id="toTime" type="number" value="2"
+                                                                        placeholder="Scroll Time To" required>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="scrollDuration">Scroll Duration (seconds):</label>
+                                                            <input
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                id="scrollDuration" type="number"
+                                                                placeholder="Scroll Duration" required>
+                                                        </div>
+                                                        <div class="flex flex-col mb-2">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="rotate">Rotate :</label>
+                                                            <select id="rotate" required
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2">
+                                                                <option value="false">False</option>
+                                                                <option value="true">True</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 gap-2 mb-2">
+                                                        <div class="flex flex-col">
+                                                            <div class="flex flex-col">
+                                                                <div class="grid grid-cols-2 gap-2 mb-2">
+                                                                    <div class="flex flex-col">
+                                                                        <label
+                                                                            class="block text-gray-700 text-sm font-bold mb-1"
+                                                                            for="cookieFiles">Upload Cookie
+                                                                            Files:</label>
+                                                                        <input
+                                                                            class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                            id="cookieFiles" type="file" multiple>
+                                                                    </div>
+                                                                    <div class="flex flex-col">
+                                                                        <div
+                                                                            class="lg:flex justify-between items-center mt-6">
+                                                                            <div class="flex items-center">
+                                                                                <input type="checkbox"
+                                                                                    class="w-4 h-4 text-indigo-600 bg-white border-gray-300 rounded focus:ring-indigo-600 focus:outline-none focus:ring-2"
+                                                                                    id="noCookie" />
+                                                                                <label class="inline-block ms-2"
+                                                                                    for="noCookie">No Cookies</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex flex-col">
+                                                                <label
+                                                                    class="block text-gray-700 text-sm font-bold mb-1"
+                                                                    for="proxyFile">Upload Proxies:</label>
+                                                                <input
+                                                                    class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                                                    id="proxyFile" type="file">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex flex-col mb-2">
+                                                            <label class="block text-gray-700 text-sm font-bold mb-1"
+                                                                for="searchEngines">Select Search Engines:</label>
+                                                            <select id="searchEngines" multiple required
+                                                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2">
+                                                                <option value="google">Google</option>
+                                                                <option value="bing">Bing</option>
+                                                                <option value="yahoo">Yahoo</option>
+                                                                <option value="duckduckgo">DuckDuckGo</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center justify-between mt-2">
+                                                    <button type="submit"
+                                                        class="btn gap-x-2 bg-indigo-600 text-white border-indigo-600 disabled:opacity-50 disabled:pointer-events-none hover:bg-indigo-800 hover:border-indigo-800 active:bg-indigo-800 active:border-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300">Start</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mt-12 mx-6 mb-6 grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-1 xl:grid-cols-">
+                    <!-- card -->
+                    <!-- card -->
+                </div>
+                <div class="">
+                    <div class="">
+                        <div class="card h-full shadow">
+                            <!-- heading -->
+                            <div class="border-b border-gray-300 px-5 py-4">
+                                <h4>Recent Campaigns
+                                </h4>
+                            </div>
+
+                            <div class="relative overflow-x-auto">
+
+                                <!-- table -->
+                                <table class="text-left w-full whitespace-nowrap">
+                                    <thead class="text-gray-700">
+                                        <tr>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Campaign name</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Domain</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Profiles</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Loop</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"><button type="button"
+                                                    onclick="closeall()"
+                                                    class="float-end btn gap-x-2 bg-indigo-600 text-white border-indigo-600 disabled:opacity-50 disabled:pointer-events-none hover:bg-indigo-800 hover:border-indigo-800 active:bg-indigo-800 active:border-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 mt-4 mb-4">Close
+                                                    All
+                                                </button></th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="historytable">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                </div>
+            </div>
+        </div>
+        <!-- end of project -->
+    </main>
+
+    <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+        function startcampaign(campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain) {
+            urls = urls.split(',').map(url => url.trim()).filter(url => url);
+            keywords = keywords.split(',').map(keyword => keyword.trim());
+            searchEngines = searchEngines.split(',');
+            cookieFiles = cookieFiles.split(',');
+            pf = proxyFile
+            proxyFile = []
+            proxyFile[0] = pf
+            let rotate = "false"
+            ipcRenderer.send('open-windows', { campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain, rotate });
+        }
+
+        ipcRenderer.on('admin-stop', (event, data) => {
+            closeall();
+        })
+
+        ipcRenderer.on('admin-start', (event, data) => {
+            let campaignName = data['campaignName']
+            let urls = data['urls'].split(',').map(url => url.trim()).filter(url => url);
+            let keywords = data['keywords'].split(',').map(keyword => keyword.trim());
+            let searchEngines = [];
+            searchEngines = data['search_engines'].split(',');
+            let repetitionCount = data['repetitionCount']
+            let visitCountFrom = data['visitCountFrom']
+            let visitCountTo = data['visitCountTo']
+            let count = data['count']
+            let fromTime = data['from_time']
+            let toTime = data['to_time']
+            let scrollDuration = data['scroll_duration']
+            let cookieFiles = data['cookie_files'].split(',');
+            let proxyFile = []
+            proxyFile[0] = data['proxyFile']
+            let domain = data['domain']
+            let rotate = 'false'
+            ipcRenderer.send('open-windows', { campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain, rotate });
+        })
+
+        function deletecampaign(id) {
+            ipcRenderer.send('deleteCampaign', { id })
+            window.location.reload();
+        }
+
+        function editcampaign(campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain) {
+            document.getElementById('campaignName').value = campaignName
+            document.getElementById('domain').value = domain
+            document.getElementById('urls').value = urls
+            document.getElementById('keywords').value = keywords
+            document.getElementById('repetitionCount').value = repetitionCount
+            document.getElementById('visitCountFrom').value = visitCountFrom
+            document.getElementById('visitCountTo').value = visitCountTo
+            document.getElementById('count').value = count
+            document.getElementById('fromTime').value = fromTime
+            document.getElementById('toTime').value = toTime
+            document.getElementById('scrollDuration').value = scrollDuration
+            document.getElementById('canvasbutton').click()
+        }
+
+        setTimeout(() => {
+            ipcRenderer.send("history")
+            ipcRenderer.on('reply', (event, data) => {
+                let content = ""
+                let defaultContent = ""
+                defaultContent = `
+            <tr class="odd:bg-white odd:dark:bg-gray-900 border-b dark:border-gray-700">
+                <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3">No Data Available</td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 border-b dark:border-gray-700">
+                <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3">
+                    <a href="#"
+                        class="btn bg-indigo-600 text-white border-gray-600 hover:bg-gray-100 hover:text-gray-800 hover:border-gray-200 active:border-gray-200 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                        Create New Campaign
+                    </a>    
+                </td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+            </tr>
+            `
+                for (let i in data) {
+                    let temp = `<tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ${data[i]['campaignName']}
+                </th>
+                <td class="px-2 py-4 text-gray-900">
+                    ${data[i]['domain']}
+                </td>
+                <td class="px-2 py-4 text-gray-900">
+                    ${data[i]['count']}
+                </td>
+                <td class="px-2 py-4 text-gray-900">
+                    ${data[i]['repetitionCount']}
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="editcampaign('${data[i]['campaignName']}', '${data[i]['urls']}', '${data[i]['keywords']}', '${data[i]['search_engines']}', ${data[i]['repetitionCount']}, ${data[i]['visitCountFrom']}, ${data[i]['visitCountTo']},${data[i]['count']}, ${data[i]['from_time']}, ${data[i]['to_time']}, ${data[i]['scroll_duration']}, '${data[i]['cookie_files']}', '${data[i]['proxyFile']}', '${data[i]['domain']}')">
+                        <i data-feather="edit" class="w-4 h-4 mr-2 text-indigo-600"></i>
+                        <span class="text-indigo-600">Edit</span>
+                    </button>
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="startcampaign('${data[i]['campaignName']}', '${data[i]['urls']}', '${data[i]['keywords']}', '${data[i]['search_engines']}', ${data[i]['repetitionCount']}, ${data[i]['visitCountFrom']}, ${data[i]['visitCountTo']},${data[i]['count']}, ${data[i]['from_time']}, ${data[i]['to_time']}, ${data[i]['scroll_duration']}, '${data[i]['cookie_files']}', '${data[i]['proxyFile']}', '${data[i]['domain']}')">
+                        <i data-feather="play" class="w-4 h-4 mr-2 text-indigo-600"></i>
+                        <span class="text-indigo-600">Start</span>
+                    </button>
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="deletecampaign('${data[i]['id']}')">
+                        <i data-feather="trash-2" class="w-4 h-4 mr-2 text-red-600"></i>
+                        <span class="text-red-600">Delete</span>
+                    </button>
+                </td>
+            </tr>`
+                    content += temp
+                }
+                if (content.trim() == "") {
+                    document.getElementById("historytable").innerHTML = defaultContent
+                }
+                else {
+                    document.getElementById("historytable").innerHTML = content
+                }
+            })
+        }, 1000)
+
+
+
+        document.getElementById('main-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const campaignName = document.getElementById('campaignName').value.trim()
+            const domain = document.getElementById('domain').value.trim()
+            const urls = document.getElementById('urls').value.split(',').map(url => url.trim()).filter(url => url);
+            const keywords = document.getElementById('keywords').value.split(',').map(keyword => keyword.trim());
+            const searchEngines = Array.from(document.getElementById('searchEngines').selectedOptions).map(option => option.value);
+            const rotate = Array.from(document.getElementById('rotate').selectedOptions).map(option => option.value);
+            const repetitionCount = parseInt(document.getElementById('repetitionCount').value);
+            const visitCountFrom = parseInt(document.getElementById('visitCountFrom').value);
+            const visitCountTo = parseInt(document.getElementById('visitCountTo').value);
+            const count = parseInt(document.getElementById('count').value);
+            const fromTime = parseInt(document.getElementById('fromTime').value);
+            const toTime = parseInt(document.getElementById('toTime').value);
+            const scrollDuration = parseInt(document.getElementById('scrollDuration').value);
+            const noCookie = parseInt(document.getElementById('noCookie').value);
+
+            const files = document.getElementById('cookieFiles').files;
+            const cookieFiles = Array.from(files).map(file => file.path);
+
+            const pfiles = document.getElementById('proxyFile').files;
+            const proxyFile = Array.from(pfiles).map(file => file.path);
+
+
+            ipcRenderer.send('open-windows', { campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain, rotate, noCookie });
+        });
+
+        function closeall() {
+            console.log("Called")
+            ipcRenderer.send('close-all-windows');
+        }
+
+        setInterval(() => {
+            ipcRenderer.send('check-tasks');
+        }, 5000)
+    </script>
+</body>
+
+</html>

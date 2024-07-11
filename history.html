@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Traffic Generator</title>
+  <link href="index.css" rel="">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <nav class="bg-gray-800 border-gray-200 text-white fixed w-full">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-2">
+      <a href="index.html" class="text-left">
+        <h2 class="text-2xl font-semibold dark:text-white">Web Traffic Generator</h2>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="index.html"
+              class="block py-2 px-3 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-500 md:p-0 dark:text-white md:dark:text-blue-500"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="history.html"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">History</a>
+          </li>
+          <li>
+            <a href="developer.html"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
+              Developer</a>
+          </li>
+        </ul>
+      </div>
+      <div id="test"></div>
+    </div>
+  </nav>
+  
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-4">
+    <br><br><br><br>
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Campaign ID
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Campaign
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Profiles
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Created At
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody id="historytable">
+        </tbody>
+    </table>
+</div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+    ipcRenderer.send("history")
+    ipcRenderer.on('reply',(event,data) => {
+        let content = ""
+        for(let i in data) {
+            let temp = `<tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ${data[i]['id']}
+                </th>
+                <td class="px-6 py-4">
+                    ${data[i]['name']}
+                </td>
+                <td class="px-6 py-4">
+                    ${data[i]['count']}
+                </td>
+                <td class="px-6 py-4">
+                    ${data[i]['created_at']}
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a> / <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Start</a>
+                </td>
+            </tr>`
+            content += temp
+        }
+        document.getElementById("historytable").innerHTML = content
+    })
+  </script>
+  <footer class="rounded-sm shadow mt-40 bg-gray-800 bottom-0 fixed w-full">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-center text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="mailto:atulg0736@gmail.com"
+          class="hover:underline">atulg</a>. All Rights Reserved.
+      </span>
+    </div>
+  </footer>
+</body>
+
+</html>

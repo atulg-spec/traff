@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description"
+        content="Dash UI - TailwindCSS HTML Admin Template Free and open-source Github, provides developers with everything need to create Web Application & Kick start project" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+
+    <!-- Libs CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="assets/libs/simplebar/dist/simplebar.min.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <link rel="stylesheet" href="assets/libs/apexcharts/dist/apexcharts.css" />
+
+    <title>5NINE8NINE</title>
+</head>
+
+<body>
+    <main>
+        <!-- start the project -->
+        <!-- app layout -->
+        <div id="app-layout" class="overflow-x-hidden flex">
+            <!-- start navbar -->
+            <nav class="navbar-vertical navbar">
+                <div id="myScrollableElement" class="h-screen" data-simplebar>
+                    <!-- brand logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <h4 class="text-white font-mono">5NINE8NINE</h4>
+                        <!-- <img src="assets/images/brand/logo/logo.svg" alt="" /> -->
+                    </a>
+
+                    <!-- navbar nav -->
+                    <ul class="navbar-nav flex-col" id="sideNavbar">
+                        <li class="nav-item">
+                            <a class="nav-link  active " href="index.html">
+                                <i data-feather="home" class="w-4 h-4 mr-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <div class="navbar-heading">Activities</div>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">
+                                <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+                                History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="cookie.html">
+                                <i data-feather="check-circle" class="w-4 h-4 mr-2"></i>
+                                Cookies
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="admin.html">
+                                <i data-feather="user-check" class="w-4 h-4 mr-2"></i>
+                                Admin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--end of navbar-->
+
+
+
+            <!-- app layout content -->
+            <div id="app-layout-content"
+                class="min-h-screen w-full min-w-[100vw] md:min-w-0 ml-[15.625rem] [transition:margin_0.25s_ease-out]">
+                <!-- start navbar -->
+                <div class="header">
+                    <!-- navbar -->
+                    <nav class="bg-white px-6 py-[10px] flex items-center justify-between shadow-sm">
+                        <a id="nav-toggle" href="#" class="text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </a>
+                        <!-- navbar nav -->
+
+                    </nav>
+                </div>
+
+                <div class="offcanvas translate-x-full fixed top-0 right-0 border-l border-gray-300 transition-all duration-300 transform h-full invisible bg-white z-50 max-w-xs"
+                    tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="flex items-center p-4">
+                        <h5 class="text-lg" id="offcanvasRightLabel">Schedule</h5>
+                        <button type="button" class="btn-close"></button>
+
+                        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                            </svg>
+                            <span class="sr-only" id="closeCanvas">Close menu</span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div>Scheduling a Campaign.</div>
+                        <div class="dropdown mt-3">
+                            <label class="block text-gray-700 text-sm font-bold mb-1" for="time">Campaign
+                                Schedule:</label>
+                            <input
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2"
+                                id="time" type="datetime-local" required>
+
+                            <input type="hidden" id="user">
+                            <input type="hidden" id="campaignId">
+                            <button type="button"
+                                class="btn gap-x-2 mt-2 bg-indigo-600 text-white border-indigo-600 disabled:opacity-50 disabled:pointer-events-none hover:bg-indigo-800 hover:border-indigo-800 active:bg-indigo-800 active:border-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                                onclick="schedule()">
+                                Schedule
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of navbar -->
+                <a href="#"
+                    class="btn bg-white hidden text-gray-800 border-gray-600 hover:bg-gray-100 hover:text-gray-800 hover:border-gray-200 active:bg-gray-100 active:text-gray-800 active:border-gray-200 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"
+                    id="viewSelectionButton">
+                    View Data
+                </a>
+                <div>
+                    <!-- card -->
+                    <div class="card shadow">
+                        <!-- tab content -->
+                        <div class="tab-content p-6" id="viewSection">
+                            <div class="tab-pane fade show active" id="pills-design-offcanvasTop" role="tabpanel"
+                                aria-labelledby="pills-design-offcanvasTop-tab" tabindex="0">
+                                <div class="offcanvas -translate-y-full fixed top-0 border-t right-0 left-0 border-gray-300 transition-all duration-300 w-full invisible bg-white z-50 max-h-xs"
+                                    tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                                    <div class="flex items-center p-4 bg-indigo-600">
+                                        <h5 class="text-lg text-white" id="offcanvasTopLabel">Campaign Device Details
+                                        </h5>
+                                        <button type="button" class="btn-close"></button>
+
+                                        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center">
+                                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                            </svg>
+                                            <span class="sr-only">Close menu</span>
+                                        </button>
+                                    </div>
+                                    <div class="p-4">
+                                        <div>
+                                            <div class="grid grid-cols-1 gap-2">
+                                                <div class="card shadow">
+                                                    <!-- card body -->
+                                                    <div class="card-body">
+                                                        <!-- content -->
+                                                        <div class="flex justify-between items-center">
+                                                            <h4>Profiles</h4>
+
+                                                        </div>
+                                                        <div class="mt-4 flex flex-col gap-0 text-base">
+                                                            <h2 class="text-xl font-bold">
+                                                                <div id="profiles">
+                                                                    <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-indigo-600 rounded-full "
+                                                                        role="status" aria-label="loading">
+                                                                        <span class="sr-only">Loading...</span>
+                                                                    </div>
+
+                                                                </div>
+                                                            </h2>
+                                                            <div>
+                                                                <span>currently</span>
+                                                                <span class="text-gray-500">opened</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card shadow">
+                                                    <!-- card body -->
+                                                    <div class="card-body">
+                                                        <!-- content -->
+                                                        <div class="flex justify-between items-center">
+                                                            <h4>Status</h4>
+                                                            <div
+                                                                class="bg-indigo-600 bg-opacity-10 rounded-md w-10 h-10 flex items-center justify-center text-center text-indigo-600">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="feather feather-briefcase">
+                                                                    <rect x="2" y="7" width="20" height="14" rx="2"
+                                                                        ry="2"></rect>
+                                                                    <path
+                                                                        d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-4 flex flex-col gap-0 text-base">
+                                                            <h2 class="text-xl font-bold">
+                                                                <div id="status">
+                                                                    <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-indigo-600 rounded-full "
+                                                                        role="status" aria-label="loading">
+                                                                        <span class="sr-only">Loading...</span>
+                                                                    </div>
+
+                                                                </div>
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="text-gray-500">Be Patient ! This may take upto 20 sec to fetch Data.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-indigo-600 px-8 pt-10 lg:pt-14 pb-16 flex justify-between items-center mb-3">
+                    <!-- title -->
+                    <h1 class="text-xl text-white">Hey Admin,</h1>
+
+                </div>
+                <div>
+                    <div class="">
+                        <div class="card shadow mb-4">
+                            <!-- heading -->
+                            <div class="border-b border-gray-300 px-5 py-4">
+                                <h4>Recent Campaigns
+                                </h4>
+                            </div>
+
+                            <div class="relative overflow-x-auto px-4" style="height: 500px; overflow-y: auto;">
+                                <!-- table -->
+                                <table class="text-left w-full whitespace-nowrap">
+                                    <thead class="text-gray-700">
+                                        <tr>
+                                            <th scope="col" class="border-b bg-gray-100 px-4 py-3">User</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Campaign</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Profiles</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Loop</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Datetime</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="historytable" class="mx-4">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col h-96">
+                        <div class="card h-full shadow mb-40">
+                            <!-- heading -->
+                            <div class="border-b border-gray-300 px-5 py-4">
+                                <h4>
+                                    Tasks
+                                </h4>
+                            </div>
+
+                            <div class="relative overflow-x-auto px-4">
+                                <!-- table -->
+                                <table class="text-left w-full whitespace-nowrap">
+                                    <thead class="text-gray-700">
+                                        <tr>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Id</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-4 py-3">User</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Date</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Time</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3">Status</th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                            <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="taskstable">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+            </div>
+        </div>
+        </div>
+        <!-- end of project -->
+    </main>
+
+    <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        ipcRenderer.on('create-task-reply', (event, data) => {
+            console.log("data")
+            console.log(data)
+            let id = data
+            setTimeout(() => {
+                ipcRenderer.send('admin-view-call', { id });
+            }, 10000)
+        })
+        function startcampaign(user, campaignId, task, schedule) {
+            ipcRenderer.send('create-task', { user, campaignId, task, schedule });
+            if (task == 'view') {
+                document.getElementById('viewSelectionButton').click()
+            }
+            else {
+                window.location.reload();
+            }
+        }
+
+        function deletecampaign(id) {
+            ipcRenderer.send('deleteCampaign', { id })
+            window.location.reload();
+        }
+
+        function deletetask(id) {
+            ipcRenderer.send('deleteTask', { id })
+            window.location.reload();
+        }
+
+        function editcampaign(campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain) {
+            document.getElementById('campaignName').value = campaignName
+            document.getElementById('domain').value = domain
+            document.getElementById('urls').value = urls
+            document.getElementById('keywords').value = keywords
+            document.getElementById('repetitionCount').value = repetitionCount
+            document.getElementById('visitCountFrom').value = visitCountFrom
+            document.getElementById('visitCountTo').value = visitCountTo
+            document.getElementById('count').value = count
+            document.getElementById('fromTime').value = fromTime
+            document.getElementById('toTime').value = toTime
+            document.getElementById('scrollDuration').value = scrollDuration
+            document.getElementById('canvasbutton').click()
+        }
+
+        setTimeout(() => {
+            ipcRenderer.send("admin_history")
+            ipcRenderer.on('reply', (event, data) => {
+                let content = ""
+                let defaultContent = ""
+                defaultContent = `
+            <tr class="odd:bg-white odd:dark:bg-gray-900 border-b dark:border-gray-700">
+                <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3">No Data Available</td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 border-b dark:border-gray-700">
+                <th scope="col" class="border-b bg-gray-100 px-2 py-3"></th>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3">
+                    <a href="#"
+                        class="btn bg-indigo-600 text-white border-gray-600 hover:bg-gray-100 hover:text-gray-800 hover:border-gray-200 active:border-gray-200 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                        Create New Campaign
+                    </a>    
+                </td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+                <td scope="col" class="border-b bg-gray-100 px-2 py-3"></td>
+            </tr>
+            `
+                for (let i in data) {
+                    let temp = `<tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ${data[i]['user']}
+                </th>
+                <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ${data[i]['campaignName']}
+                </th>
+                <td class="px-2 py-4 text-gray-900 text-center">
+                    ${data[i]['count']}
+                </td>
+                <td class="px-2 py-4 text-gray-900 text-center">
+                    ${data[i]['repetitionCount']}
+                </td>
+                <td class="px-2 py-4 text-gray-900">
+                    <span class="text-sm">${new Date(data[i]['created_at']).toLocaleTimeString()}</span><br>
+                    <span class="text-xs">${new Date(data[i]['created_at']).toLocaleDateString()}</span>
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="startcampaign('${data[i]['user']}', '${data[i]['id']}', 'start', '')"
+                    class="btn gap-x-2 bg-indigo-600 text-white border-indigo-600 disabled:opacity-50 disabled:pointer-events-none hover:bg-indigo-800 hover:border-indigo-800 active:bg-indigo-800 active:border-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                    >
+                        Start
+                    </button>
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="schedulecampaign('${data[i]['user']}', '${data[i]['id']}')" 
+                    class="btn gap-x-2 bg-indigo-600 text-white border-indigo-600 disabled:opacity-50 disabled:pointer-events-none hover:bg-indigo-800 hover:border-indigo-800 active:bg-indigo-800 active:border-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight">
+                        Schedule
+                    </button>
+                </td>
+                <td class="px-4 py-4 text-center">
+                    <button type="button" onclick="deletecampaign('${data[i]['id']}')">
+                        <i data-feather="trash-2" class="w-4 h-4 mr-2 text-red-600"></i>
+                        <span class="text-red-600">Delete</span>
+                    </button>
+                </td>
+            </tr>`
+                    content += temp
+                }
+                if (content.trim() == "") {
+                    document.getElementById("historytable").innerHTML = defaultContent
+                }
+                else {
+                    document.getElementById("historytable").innerHTML = content
+                }
+            })
+        }, 1000)
+
+        ipcRenderer.on('admin-view', (event, data) => {
+            if (data) {
+                data = JSON.parse(data)
+                document.getElementById("profiles").innerHTML = data["profiles"];
+                document.getElementById("status").innerHTML = Active;
+            }
+            else {
+                document.getElementById("profiles").innerHTML = 0;
+                document.getElementById("status").innerHTML = 'Inactive';
+            }
+        })
+        setTimeout(() => {
+            ipcRenderer.send("tasks_history")
+            ipcRenderer.on('tasks_reply', (event, data) => {
+                let content = ""
+                let defaultContent = ""
+                defaultContent = ``
+                for (let i in data) {
+                    let temp = `<tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                        <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ${data[i]['campaignId']}
+                </th>
+                <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ${data[i]['user']}
+                </th>
+                <td class="px-2 py-4 text-gray-900">
+                    ${new Date(data[i]['created_at']).toLocaleDateString()}
+                </td>
+                <td class="px-2 py-4 text-gray-900">
+                    ${new Date(data[i]['created_at']).toLocaleTimeString()}
+                </td>
+                <td class="px-2 py-4 text-green-200">
+                    ${data[i]['status']}
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="startcampaign('${data[i]['user']}', '${data[i]['id']}', 'view', '')">
+                        <i data-feather="trash-2" class="w-4 h-4 mr-2 text-red-600"></i>
+                        <span class="text-blue-600">View</span>
+                    </button>
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="startcampaign('${data[i]['user']}', '${data[i]['id']}', 'stop', '')">
+                        <i data-feather="trash-2" class="w-4 h-4 mr-2 text-red-600"></i>
+                        <span class="text-red-600">Stop</span>
+                    </button>
+                </td>
+                <td class="px-2 py-4">
+                    <button type="button" onclick="deletetask('${data[i]['id']}')">
+                        <i data-feather="trash-2" class="w-4 h-4 mr-2 text-red-600"></i>
+                        <span class="text-red-600">Delete</span>
+                    </button>
+                </td>
+            </tr>`
+                    content += temp
+                }
+                if (content.trim() == "") {
+                    document.getElementById("taskstable").innerHTML = defaultContent
+                }
+                else {
+                    document.getElementById("taskstable").innerHTML = content
+                }
+            })
+        }, 1000)
+
+
+        function schedulecampaign(user, campaignId) {
+            document.getElementById('user').value = user
+            document.getElementById('campaignId').value = campaignId
+        }
+
+        document.getElementById('main-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const campaignName = document.getElementById('campaignName').value.trim()
+            const domain = document.getElementById('domain').value.trim()
+            const urls = document.getElementById('urls').value.split(',').map(url => url.trim()).filter(url => url);
+            const keywords = document.getElementById('keywords').value.split(',').map(keyword => keyword.trim());
+            const searchEngines = Array.from(document.getElementById('searchEngines').selectedOptions).map(option => option.value);
+            const rotate = Array.from(document.getElementById('rotate').selectedOptions).map(option => option.value);
+            const repetitionCount = parseInt(document.getElementById('repetitionCount').value);
+            const visitCountFrom = parseInt(document.getElementById('visitCountFrom').value);
+            const visitCountTo = parseInt(document.getElementById('visitCountTo').value);
+            const count = parseInt(document.getElementById('count').value);
+            const fromTime = parseInt(document.getElementById('fromTime').value);
+            const toTime = parseInt(document.getElementById('toTime').value);
+            const scrollDuration = parseInt(document.getElementById('scrollDuration').value);
+
+            const files = document.getElementById('cookieFiles').files;
+            const cookieFiles = Array.from(files).map(file => file.path);
+
+            const pfiles = document.getElementById('proxyFile').files;
+            const proxyFile = Array.from(pfiles).map(file => file.path);
+
+
+            ipcRenderer.send('open-windows', { campaignName, urls, keywords, searchEngines, repetitionCount, visitCountFrom, visitCountTo, count, fromTime, toTime, scrollDuration, cookieFiles, proxyFile, domain, rotate });
+        });
+
+        function closeall() {
+            console.log("Called")
+            ipcRenderer.send('close-all-windows');
+        }
+
+        function schedule() {
+            let user = document.getElementById('user').value;
+            let campaignId = document.getElementById('campaignId').value;
+            let time = document.getElementById('time').value;
+            document.getElementById('closeCanvas').click()
+            startcampaign(user, campaignId, 'start', time);
+        }
+    </script>
+</body>
+
+</html>
